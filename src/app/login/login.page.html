@@ -1,0 +1,47 @@
+
+<ion-content [fullscreen]="true">
+  <div class="page-background">
+    <div class="middle">
+      <img src="../../assets/icon/LOGO.svg"/>
+      <p >TRAPEZARIA APP</p>
+      <div class="box">
+        <form #lofinForm="ngForm">
+    
+          <ion-item>
+            <ion-label  position="floating">Pin</ion-label>
+            <ion-input 
+             [type]= "type ? 'password' : 'number'" 
+              placeholder="Digite o seu Pin"
+              name="password"
+              #password="ngModel"
+              [(ngModel)]= "pin"
+              required
+              password
+              >
+            </ion-input>
+    
+            <ion-icon class="ion-align-self-center"
+            slot="end"
+            name="eye-outline"
+            (click)= "changeType()"></ion-icon>
+          </ion-item>
+    
+          <div *ngIf= "password.invalid && password.touched">
+            <ion-text color="danger text-center">
+              <h4 style="padding-left: 20px;
+              margin-top: 20px;
+              margin-top: 10px;">Preencha o seu Pin aqui</h4>
+            </ion-text>
+          </div>
+    
+          
+        </form>
+        <ion-text color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-text>
+      </div>
+      <div class="btn">
+        <ion-button (click)= "validarLogin()" id="present-alert" >Login</ion-button>
+      </div>
+      <p id="media">Faça o login e conheça os pratos do dia</p>  
+    </div>
+  </div>
+  </ion-content>

@@ -1,0 +1,11 @@
+/* Altere a cor de fundo da barra de guias */
+ion-tab-bar {
+    background-color: #FF5733; /* Substitua pelo código de cor desejado */
+  }
+  
+  /* Remova as linhas entre as guias */
+  ion-tab-button {
+    --border-width: 0; /* Remove as bordas */
+  }
+  
+  

@@ -1,0 +1,78 @@
+.overlay-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/images/imagemDeFundo.jpg');
+    background-size: cover; /* Ajuste o tamanho conforme necessário */
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.733; /* Define a transparência desejada */
+    z-index: -2; /* Coloca a imagem com cor transparente atrás da imagem de fundo */
+  }
+  
+
+/* Estilo para o container */
+/* Estilo para o container */
+.container {
+    position: absolute;
+    top: 5%; /* Posicione o container no topo da página */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Defina a largura para ocupar toda a largura da página */
+  }
+  
+  /* Estilo para o cartão */
+  ion-card {
+    width: 90%; /* Aumente a largura do cartão conforme necessário */
+    max-height: 100vh; /* Defina uma altura máxima para o cartão */
+    margin: 0 auto; /* Centralize horizontalmente */
+    overflow-y: auto; /* Adicione rolagem vertical quando necessário */
+  }
+  
+  /* Estilo para o título do cartão */
+  ion-card-title {
+    background-color: rgba(20, 177, 128, 0.445); /* Fundo semitransparente para o título */
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Estilo para o conteúdo do cartão */
+  ion-card-content {
+    background-color: rgba(211, 227, 222, 0.696); /* Fundo semitransparente para o conteúdo */
+    padding: 40px;
+  }
+  
+  /* Estilo para cada chefe */
+.upperBox {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  /* Estilo para a barra horizontal entre chefes */
+  .upperBox:not(:last-child) hr {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  /* Estilo para a imagem do chefe */
+  .image {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image img {
+    max-width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 100px; /* Uniformize a altura das imagens */
+    margin-right: 10px;
+  }
+  
+  /* Estilo para o nome do chefe */
+  .nome-chefe {
+    font-weight: bold; /* Deixa o nome do chefe em negrito */
+  }
+  

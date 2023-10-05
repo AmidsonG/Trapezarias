@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Avaliação da Cozinha</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <div class="rating">
+      <ion-icon [name]="estrelasSelecionadas >= 1 ? 'star' : 'star-outline'" (click)="setRating(1)"></ion-icon>
+      <ion-icon [name]="estrelasSelecionadas >= 2 ? 'star' : 'star-outline'" (click)="setRating(2)"></ion-icon>
+      <ion-icon [name]="estrelasSelecionadas >= 3 ? 'star' : 'star-outline'" (click)="setRating(3)"></ion-icon>
+      <ion-icon [name]="estrelasSelecionadas >= 4 ? 'star' : 'star-outline'" (click)="setRating(4)"></ion-icon>
+      <ion-icon [name]="estrelasSelecionadas >= 5 ? 'star' : 'star-outline'" (click)="setRating(5)"></ion-icon>
+    </div>
+    <button (click)="avaliarCozinha()">Avaliar</button>
+
+  </div>
+  
+  
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeHistorico()">Close</ion-button>
+    </ion-buttons>
+    <ion-title>historico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+    <div class="container">
+      <div>
+        <div class="upperBox" *ngFor= "let p of pratos">
+            <div class="image">
+                <img (click)= "openModal(p.imagem, p.nome_do_prato, p.descricao)" [src]= "p.imagem" alt="Imagem não" />
+            </div>
+            <div class="title" >
+                <h3 (click)= "openModal(p.imagem, p.nome_do_prato, p.descricao)">{{p.nome_do_prato}}</h3>
+            </div>
+        </div>
+      </div>
+
+      <div class="modalDescription">
+        <ion-header>
+          <ion-toolbar>
+            <ion-title></ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-modal [isOpen]="isModalOpen">
+            <ng-template>
+              <ion-header>
+                <ion-toolbar>
+                  <ion-title>Descrição do Prato</ion-title>
+                  <ion-buttons slot="start">
+                    <ion-button (click)="closeModal()">Close</ion-button>
+                  </ion-buttons>
+                </ion-toolbar>
+              </ion-header>
+              <ion-content class="ion-padding">
+                <div >
+                  
+                  <img [src]= "selectedImage"/>
+                  <h3>{{selectedTitle}}</h3>
+                  <p>{{selectedDescription}}</p>
+        
+                </div>
+             </ion-content>
+            </ng-template>
+          </ion-modal>
+        </ion-content>
+      </div>
+    </div>
+</ion-content>
+
