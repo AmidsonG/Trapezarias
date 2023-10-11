@@ -11,7 +11,8 @@ export const environment = {
   ocupacao:'ocupacao/',
   avaliacaoP: 'avaliacao-alimentos/',
   avaliacaoCh: 'avaliacao-chefe/',
-  avaliacaoCz: 'avaliacao-cozinha/'
+  avaliacaoCz: 'avaliacao-cozinha/',
+  cozinha: 'cozinha/'
 };
 
 /*

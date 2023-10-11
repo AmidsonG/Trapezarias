@@ -12,7 +12,6 @@ import { catchError, tap } from 'rxjs/operators';
 export class HttpService {
 
   private apiUrl = `${environment.baseUrl}${environment.usuario}`;
-  private userId: number | null = null; 
   private pratoId!: number;
 
   private userIdSubject: BehaviorSubject<number | null> = new BehaviorSubject<number | null>(null);
@@ -25,8 +24,6 @@ export class HttpService {
   setUserId(userId: string) {
     localStorage.setItem('user', userId)
   }
-
-  
 
   setIdPratoAvaliado(pratoId: number) {
     this.pratoId = pratoId;
@@ -101,6 +98,17 @@ export class HttpService {
     return this.http.get(environment.baseUrl + environment.ocupacao, {headers});
   }
 
+  getCozinha(params:any){
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjozMTU3NTUwMDgwLCJpYXQiOjE2OTU2NjIwODAsImp0aSI6IjYxYTgwOWJiN2I0ODQ0NDZhYTFlOWVmOWNhZGZlM2RhIiwidXNlcl9pZCI6MX0.yz2_-wH1Y6NK12wIxFyPvcZM8O-H9B5vEzs9EpZd5xo'; // Substitua pelo seu token real
+
+    // Configurar o cabeçalho de autorização
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+    return this.http.get(`${environment.baseUrl}${environment.cozinha}`, {headers});  
+  }
+
+
   validarLogin(pin: string): Observable<any> {
     const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjozMTU3NTUwMDgwLCJpYXQiOjE2OTU2NjIwODAsImp0aSI6IjYxYTgwOWJiN2I0ODQ0NDZhYTFlOWVmOWNhZGZlM2RhIiwidXNlcl9pZCI6MX0.yz2_-wH1Y6NK12wIxFyPvcZM8O-H9B5vEzs9EpZd5xo'; // Substitua pelo seu token real
 
@@ -152,11 +160,7 @@ export class HttpService {
     return this.http.post(environment.baseUrl+ environment.avaliacaoCz, avaliacaoDataC,{headers});
   }
 
-    // Método para obter os dados do usuário da API
-    getUserData(id: number): Observable<any> {
-      // Faça uma solicitação HTTP para buscar os dados do usuário
-      return this.http.get<any>(`URL_DA_SUA_API/usuarios/${id}`);
-    }
+ 
 
 
 

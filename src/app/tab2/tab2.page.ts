@@ -29,7 +29,6 @@ export class Tab2Page implements OnInit{
         this.ocupacao.push(...res);
         this.usersCount= this.ocupacao;
         console.log(this.ocupacao,'usuario');
-        console.log('conta', this.usersCount);
 
       }, 
       error: (error:any)=>{

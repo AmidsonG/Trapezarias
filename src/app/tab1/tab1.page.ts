@@ -35,6 +35,10 @@ idPrato: number | undefined ;
     this.isModalOpen = false;// Fechar o modal
   }
 
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
+
   //Lista de objectos ou JSON que trás os pratos, os nomes e as imagens 19-105
 
 //Variavel que recebe os pratos

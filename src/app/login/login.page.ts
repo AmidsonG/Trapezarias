@@ -36,7 +36,6 @@ export class LoginPage implements OnInit {
       if (response && response.length > 0) {
         // O PIN existe na API, o login é válido
 
-        console.log(response, 'resp');
         this.errorMessage = '';
 
          // Armazena o ID do usuário no serviço HttpService
@@ -47,7 +46,7 @@ export class LoginPage implements OnInit {
         if (userId !== null && userId !== undefined) {
           console.log('ID do Usuário:', userId);
         } else {
-          console.error('Erro ao obter o ID do usuário após o login.');
+          
         }
 
 

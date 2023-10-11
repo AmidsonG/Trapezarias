@@ -55,6 +55,9 @@ export class HistoricoPage implements OnInit {
   closeHistorico(){
     this.router.navigate(['/tabs/tab1']);
   }
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
 }
 
 

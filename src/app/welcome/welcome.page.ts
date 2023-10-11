@@ -22,9 +22,6 @@ export class WelcomePage implements OnInit {
   ngOnInit() {
     this.params.page = 0;
     this.getUsuario();
-    
-      
-   
   }
   
   getUsuario(event?:any){
@@ -33,7 +30,6 @@ export class WelcomePage implements OnInit {
       next: (res:any)=>{
         
         this.usuarios.push(...res);
-        console.log(this.usuarios, "users");
 
       },
     })

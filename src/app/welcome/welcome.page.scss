@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(4, 10, 46, 0.733); /* Cor de fundo com transparência */
+    background-color: rgba(4, 10, 46, 0.92); /* Cor de fundo com transparência */
   }
   
   .page-background::before {
@@ -53,7 +53,7 @@
   .horizontal-bar {
     border: none;
     border-top: 2px solid white; /* Estilize a barra horizontal conforme necessário */
-    margin: 10px 0; /* Adicione margem acima e abaixo da barra */
+    margin: 7px 0; /* Adicione margem acima e abaixo da barra */
   }
 
   .content {
@@ -65,6 +65,9 @@
     margin-top:100px;
   }
   
+  .page-background h1{
+    font-size: 37px;
+  }
   
   
   
